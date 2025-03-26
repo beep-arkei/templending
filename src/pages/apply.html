@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="public/logo-no-bg.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <link rel="stylesheet" href="../style.css" />
+    <title>Lending Beppu</title>
+  </head>
+
+  <body class="h-screen flex flex-col bg-blend-color bg-site-black text-var--site-white">
+    <div class="banner bg-gray-900 w-full">
+      <div id="title" class="flex flex-row p-5 pb-3">
+        <div>
+          <img src="../../public/logo-no-bg.png" alt="BeppuApp Logo" class="l-15 w-15" />
+        </div>
+        <div class="pl-10">
+          <h1 class="text-4xl"><span class="text-var--site-light-blue">Beppu</span><span class="text-var--site-purple">App</span> Lending</h1>
+        </div>
+        <div id="right-title" class="flex flex-row items-center ml-auto">
+          <div class="flex space-x-4"></div>
+          <div class="flex flex-col space-y-2">
+            <a href="./wip.html" class="text-var--site-white bg-var--site-light-blue px-2 py-1 rounded text-sm text-center">Login</a>
+            <a href="./wip.html" class="text-var--site-white bg-var--site-purple px-2 py-1 rounded text-sm text-center">Register</a>
+          </div>
+        </div>
+      </div>
+      <div id="header" class="flex justify-evenly items-center w-full bg-gray-800 h-10">
+        <a href="./index.html" class="h-full flex items-center justify-center px-4">Home</a>
+        <a href="#" class="h-full flex items-center justify-center px-4  bg-gray-900">Apply Loan</a>
+        <a href="./wip.html" class="h-full flex items-center justify-center px-4">Manage Loans</a>
+        <a href="./wip.html" class="h-full flex items-center justify-center px-4 ">About</a>
+      </div>
+    </div>
+    
+    <div id="main" class="flex flex-col items-center justify-center h-auto m-5 w-full">
+        <div class="flex flex-col items-start justify-center w-full max-w-screen-lg h-full">
+            <h1 class="text-4xl">Loan Application</h1>
+            <p class="text-lg">Please input the details in order to apply for a loan.</p>
+            <br />
+            <form id="loanForm" class="space-y-4 w-full" action="../php/submit.php" method="POST">
+            <!-- Name -->
+            <label class="block">Name
+                <input type="text" id="name" class="w-full p-2 border rounded" required>
+            </label>
+        
+            <!-- Address -->
+            <label class="block">Address
+                <input type="text" id="address" class="w-full p-2 border rounded" required>
+            </label>
+        
+            <!-- Mobile Number -->
+            <label class="block">Mobile Number
+                <input type="text" id="mobile" class="w-full p-2 border rounded" required>
+            </label>
+        
+            <!-- Messenger Account -->
+            <label class="block">Messenger Account
+                <input type="text" id="messenger" class="w-full p-2 border rounded" required>
+            </label>
+        
+            <!-- Co-maker -->
+            <label class="block">Co-maker
+                <input type="text" id="comaker" class="w-full p-2 border rounded" required>
+            </label>
+        
+            <!-- Monthly Income -->
+            <label class="block">Monthly Income
+                <input type="number" id="monthlyIncome" class="w-full p-2 border rounded" required min="1">
+            </label>
+        
+            <!-- Income Source -->
+            <label class="block">Income Source
+                <select id="incomeSource" class="w-full p-2 border rounded" required>
+                <option value="job">Job (Specify)</option>
+                <option value="allowance">Allowance</option>
+                <option value="pension">Pension</option>
+                <option value="others">Others (Specify)</option>
+                </select>
+            </label>
+            
+            <!-- Additional textbox for specifying income -->
+            <label id="incomeSpecifyLabel" class="block hidden">Specify Income Source
+                <input type="text" id="incomeSpecify" class="w-full p-2 border rounded">
+            </label>
+        
+            <!-- Loan Amount -->
+            <label class="block">Loan Amount
+                <select id="loanAmount" class="w-full p-2 border rounded" required>
+                <option value="">Select Monthly Income First</option>
+                </select>
+            </label>
+        
+            <!-- Payment Plan -->
+            <label class="block">Payment Plan
+                <select id="paymentPlan" class="w-full p-2 border rounded" required>
+                <option value="1">1 Month</option>
+                <option value="3">3 Months</option>
+                <option value="6">6 Months</option>
+                <option value="12">1 Year</option>
+                </select>
+            </label>
+        
+            <!-- Payment Per Month (Calculated) -->
+            <label class="block">Payment Per Month
+                <input type="text" id="paymentPerMonth" class="w-full p-2 border rounded bg-gray-200" readonly>
+            </label>
+        
+            <button type="submit" class="bg-site-blue text-site-white p-2 rounded w-full">Apply</button>
+            </form>
+        </div>
+    </div>
+
+
+
+    <footer class="bg-gray-900 text-site-white text-center p-4 mt-auto">
+      <p>&copy; 2025 BeppuApp Lending. All rights reserved.</p>
+    </footer>
+    <!-- <script type="module" src="/src/scripts/main.js"></script>
+    <script type="module" src="../../src/scripts/main.js"></script> -->
+    
+    <script type="module" src="/src/main.js"></script>
+
+    <script type="module" src="../scripts/jav.js"></script>
+  </body>
+
+</html>

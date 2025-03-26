@@ -1,0 +1,369 @@
+@import 'tailwindcss';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* :root */
+:root {
+    --site-black: #121212ff;
+    --site-purple: #ab5cc1ff;
+    --site-light-blue: #2893ccff;
+    --site-blue: #1d8dafff;
+    --site-white: #f0f4efff;
+}
+
+/* Custom Color Classes */
+.site-black {
+    color: var(--site-black);
+}
+.site-purple {
+    color: var(--site-purple);
+}
+.site-light-blue {
+    color: var(--site-light-blue);
+}
+.site-blue {
+    color: var(--site-blue);
+}
+.site-white {
+    color: var(--site-white);
+}
+
+.bg-site-black {
+    background-color: var(--site-black);
+}
+.bg-site-purple {
+    background-color: var(--site-purple);
+}
+.bg-site-light-blue {
+    background-color: var(--site-light-blue);
+}
+.bg-site-blue {
+    background-color: var(--site-blue);
+}
+.bg-site-white {
+    background-color: var(--site-white);
+}
+
+.text-site-black {
+    color: var(--site-black);
+}
+.text-site-purple {
+    color: var(--site-purple);
+}
+.text-site-light-blue {
+    color: var(--site-light-blue);
+}
+.text-site-blue {
+    color: var(--site-blue);
+}
+.text-site-white {
+    color: var(--site-white);
+}
+
+select option {
+    background-color: var(--site-black);
+    color: white;
+}
+
+/* TEMP FOR NO TAILWIND */
+
+/* General styles */
+body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-blend-mode: color;
+    background-color: #1a1a1a; /* site-black */
+    color: #ffffff; /* site-white */
+}
+
+/* Banner styles */
+.banner {
+    background-color: #1f2937; /* bg-gray-900 */
+    width: 100%;
+}
+
+#title {
+    display: flex;
+    flex-direction: row;
+    padding: 1.25rem 1.25rem 0.75rem 1.25rem; /* p-5 pb-3 */
+}
+
+#title img {
+    width: 3.75rem; /* w-15 */
+    height: 3.75rem; /* l-15 */
+}
+
+#title h1 {
+    font-size: 2.25rem; /* text-4xl */
+}
+
+.text-var--site-light-blue {
+    color: #4fc3f7; /* site-light-blue */
+}
+
+.text-var--site-purple {
+    color: #9c27b0; /* site-purple */
+}
+
+#right-title {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-left: auto;
+}
+
+#right-title .flex {
+    display: flex;
+    gap: 1rem; /* space-x-4 */
+}
+
+#right-title .flex-col {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem; /* space-y-2 */
+}
+
+#right-title a {
+    color: #ffffff; /* text-site-white */
+    padding: 0.5rem 0.5rem; /* px-2 py-1 */
+    border-radius: 0.25rem; /* rounded */
+    font-size: 0.875rem; /* text-sm */
+    text-align: center;
+}
+
+#right-title a.bg-var--site-light-blue {
+    background-color: #4fc3f7; /* site-light-blue */
+}
+
+#right-title a.bg-var--site-purple {
+    background-color: #9c27b0; /* site-purple */
+}
+
+/* Header styles */
+#header {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    background-color: #374151; /* bg-gray-800 */
+    height: 2.5rem; /* h-10 */
+}
+
+#header a {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 1rem; /* px-4 */
+}
+
+#header a.bg-gray-900 {
+    background-color: #1f2937; /* bg-gray-900 */
+}
+
+/* Main content styles */
+#main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1.25rem; /* m-5 */
+}
+
+#main .flex-col {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#main h1 {
+    font-size: 2.25rem; /* text-4xl */
+}
+
+#main p {
+    font-size: 1.125rem; /* text-lg */
+}
+
+/* Footer styles */
+footer {
+    background-color: #1f2937; /* bg-gray-900 */
+    color: #ffffff; /* text-site-white */
+    text-align: center;
+    padding: 1rem; /* p-4 */
+    margin-top: auto; /* mt-auto */
+}
+
+/* Default font styles used in Tailwind CSS */
+body {
+    font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+/* Additional Custom CSS for Tailwind Classes */
+
+/* Utility Classes */
+.h-screen {
+    height: 100vh;
+}
+
+.flex {
+    display: flex;
+}
+
+.flex-col {
+    flex-direction: column;
+}
+
+.items-center {
+    align-items: center;
+}
+
+.items-start {
+    align-items: flex-start;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+.justify-evenly {
+    justify-content: space-evenly;
+}
+
+.w-full {
+    width: 100%;
+}
+
+.h-full {
+    height: 100%;
+}
+
+.max-w-screen-lg {
+    max-width: 1024px;
+}
+
+.m-5 {
+    margin: 1.25rem;
+}
+
+.mt-auto {
+    margin-top: auto;
+}
+
+.p-2 {
+    padding: 0.5rem;
+}
+
+.p-4 {
+    padding: 1rem;
+}
+
+.p-5 {
+    padding: 1.25rem;
+}
+
+.pb-3 {
+    padding-bottom: 0.75rem;
+}
+
+.px-2 {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+}
+
+.px-4 {
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.space-x-4 > * + * {
+    margin-left: 1rem;
+}
+
+.space-y-2 > * + * {
+    margin-top: 0.5rem;
+}
+
+.space-y-4 > * + * {
+    margin-top: 1rem;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-sm {
+    font-size: 0.875rem;
+}
+
+.text-lg {
+    font-size: 1.125rem;
+}
+
+.text-4xl {
+    font-size: 2.25rem;
+}
+
+.rounded {
+    border-radius: 0.25rem;
+}
+
+.border {
+    border: 1px solid #d1d5db; /* Default Tailwind border color */
+}
+
+.bg-gray-900 {
+    background-color: #1f2937;
+}
+
+.bg-gray-800 {
+    background-color: #374151;
+}
+
+.bg-gray-200 {
+    background-color: #e5e7eb;
+}
+
+.bg-site-black {
+    background-color: var(--site-black);
+}
+
+.bg-site-blue {
+    background-color: var(--site-blue);
+}
+
+.bg-var--site-light-blue {
+    background-color: var(--site-light-blue);
+}
+
+.bg-var--site-purple {
+    background-color: var(--site-purple);
+}
+
+.text-site-white {
+    color: var(--site-white);
+}
+
+.text-var--site-white {
+    color: var(--site-white);
+}
+
+.text-var--site-light-blue {
+    color: var(--site-light-blue);
+}
+
+.text-var--site-purple {
+    color: var(--site-purple);
+}
+
+/* Hidden Class */
+.hidden {
+    display: none;
+}
