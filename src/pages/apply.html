@@ -39,40 +39,40 @@
             <h1 class="text-4xl">Loan Application</h1>
             <p class="text-lg">Please input the details in order to apply for a loan.</p>
             <br />
-            <form id="loanForm" class="space-y-4 w-full" action="../php/submit.php" method="POST">
+            <form id="loanForm" class="space-y-4 w-full" action="submit.php" method="POST">
             <!-- Name -->
             <label class="block">Name
-                <input type="text" id="name" class="w-full p-2 border rounded" required>
+                <input name="name" type="text" id="name" class="w-full p-2 border rounded" required>
             </label>
         
             <!-- Address -->
             <label class="block">Address
-                <input type="text" id="address" class="w-full p-2 border rounded" required>
+                <input name="address" type="text" id="address" class="w-full p-2 border rounded" required>
             </label>
         
             <!-- Mobile Number -->
             <label class="block">Mobile Number
-                <input type="text" id="mobile" class="w-full p-2 border rounded" required>
+                <input name="mobile" type="text" id="mobile" class="w-full p-2 border rounded" required>
             </label>
         
             <!-- Messenger Account -->
             <label class="block">Messenger Account
-                <input type="text" id="messenger" class="w-full p-2 border rounded" required>
+                <input name="messenger" type="text" id="messenger" class="w-full p-2 border rounded" required>
             </label>
         
             <!-- Co-maker -->
             <label class="block">Co-maker
-                <input type="text" id="comaker" class="w-full p-2 border rounded" required>
+                <input name="comaker" type="text" id="comaker" class="w-full p-2 border rounded" required>
             </label>
         
             <!-- Monthly Income -->
             <label class="block">Monthly Income
-                <input type="number" id="monthlyIncome" class="w-full p-2 border rounded" required min="1">
+                <input name="monthlyIncome" type="number" id="monthlyIncome" class="w-full p-2 border rounded" required min="1">
             </label>
         
             <!-- Income Source -->
             <label class="block">Income Source
-                <select id="incomeSource" class="w-full p-2 border rounded" required>
+                <select name="incomeSource" id="incomeSource" class="w-full p-2 border rounded" required>
                 <option value="job">Job (Specify)</option>
                 <option value="allowance">Allowance</option>
                 <option value="pension">Pension</option>
@@ -82,19 +82,19 @@
             
             <!-- Additional textbox for specifying income -->
             <label id="incomeSpecifyLabel" class="block hidden">Specify Income Source
-                <input type="text" id="incomeSpecify" class="w-full p-2 border rounded">
+                <input name="incomeSpecify"  type="text" id="incomeSpecify" class="w-full p-2 border rounded">
             </label>
         
             <!-- Loan Amount -->
             <label class="block">Loan Amount
-                <select id="loanAmount" class="w-full p-2 border rounded" required>
+                <select name="loanAmount" id="loanAmount" class="w-full p-2 border rounded" required>
                 <option value="">Select Monthly Income First</option>
                 </select>
             </label>
         
             <!-- Payment Plan -->
             <label class="block">Payment Plan
-                <select id="paymentPlan" class="w-full p-2 border rounded" required>
+                <select name="paymentPlan" id="paymentPlan" class="w-full p-2 border rounded" required>
                 <option value="1">1 Month</option>
                 <option value="3">3 Months</option>
                 <option value="6">6 Months</option>
